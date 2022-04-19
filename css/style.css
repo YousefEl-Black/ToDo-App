@@ -1,0 +1,309 @@
+/* Start Variables */
+
+:root {
+  /* Primaty */
+  --bright-blue: hsl(220, 98%, 61%);
+  --first-color: hsl(192, 100%, 67%);
+  --second-color: hsl(280, 87%, 65%);
+  --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --bold: 700;
+  /* Light Theme */
+  --very-light-gray-lighttheme: hsl(0%, 0%, 98%);
+  --very-light-grayish-blue-lighttheme: hsl(236, 33%, 92%);
+  --light-grayish-blue-lighttheme: hsl(233, 11%, 84%);
+  --dark-grayish-blue-lighttheme: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue-lighttheme: hsl(235, 19%, 35%);
+  /* Dark Theme */
+  --very-dark-blue-darktheme: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue-darktheme: hsl(235, 24%, 19%);
+  --light-grayish-blue-darktheme: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover-darktheme: hsl(236, 33%, 92%);
+  --dark-grayish-blue-darktheme: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue-one-darktheme: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-two-darktheme: hsl(237, 14%, 26%);
+  /* Theme */
+  --body-color: hsl(235, 21%, 11%);
+  /* --body-color:hsl(236, 33%, 92%);  */
+  --list-color:hsl(235, 24%, 19%);
+  /* --list-color: #fff;  */
+  --input-font-color: hsl(234, 39%, 85%);
+  /* --input-font-color: #000;  */
+  --font-color: hsl(234, 39%, 85%);
+  /* --font-color: hsl(235, 19%, 35%);  */
+  --btns-font-color: hsl(234, 39%, 85%);
+  /* --btns-font-color: hsl(236, 9%, 61%);  */
+  --btns-font-color-hover: hsl(236, 33%, 92%);
+  --bottom-nav-border-color: hsl(234, 11%, 52%);
+  --items-left-font-color: hsl(234, 11%, 52%);
+  --cheched-font-color: hsl(233, 14%, 35%);
+  /* --cheched-font-color: hsl(236, 9%, 61%);  */
+  --add-border-color: hsl(237, 14%, 26%);
+  /* --add-border-color: hsl(236, 9%, 61%);  */
+  --circle-border-color: hsl(237, 14%, 26%);
+  /* --circle-border-color: hsl(236, 9%, 61%);  */
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: var(--body-color);
+}
+
+textarea:focus,
+input:focus{
+  outline: none;
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+.circle,
+.add {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid var(--add-border-color);
+  cursor: pointer;
+}
+
+.circle:hover {
+  border-color: var(--first-color) var(--first-color) var(--second-color) var(--second-color);
+}
+
+.circle i,
+.add i {
+  font-size: 12px;
+  padding: 10px ;
+  color: transparent;
+}
+
+.add:hover {
+  opacity: 0.5;
+  border-color: var(--first-color) var(--first-color) var(--second-color) var(--second-color);
+  background-image: var(--check-background);
+}
+
+.add:hover i {
+  color: white !important;
+}
+
+/*
+
+.checked {
+}
+
+.checked i {
+}
+
+*/
+
+/* End Components */
+
+/* Start Back */
+
+.back {
+  display: block;
+}
+
+.back-mob img,
+.back img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.back-mob .mob-light,
+.back .desk-light {
+  display: none;
+}
+
+.back-mob {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .back {
+    display: none;
+  }
+
+  .back-mob {
+    display: block;
+  }
+}
+
+/* End Back */
+
+/* Start  Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+header .logo {
+  color: white;
+}
+
+/* End  Header */
+
+/* Start Typing Field */
+
+.theme img:last-child{
+  display: none;
+}
+
+.type {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--list-color);
+  align-items: center;
+  border-radius: 10px;
+}
+
+.type input {
+  flex: 1;
+  height: 50px;
+  background-color: transparent;
+  color: var(--input-font-color);
+  text-indent: 10px;
+  border: none;
+}
+
+/* End Typing Field */
+
+/* Start Tasks */
+
+.tasks {
+  background-color: var(--list-color);
+  border-radius: 10px;
+  margin: 50px 0;
+}
+
+.tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+.tasks .task p {
+  flex: 1;
+  padding-left: 10px;
+  color: var(--font-color);
+}
+
+.tasks .task .del {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  display: none;
+  cursor: pointer;
+  opacity: 0;
+  font-size: 25px;
+  color: var(--add-border-color);
+}
+
+.tasks .task:hover .del {
+  display: block;
+  opacity: 1;
+}
+
+.tasks .empty {
+  /* display: none; */
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+  font-size: 25px;
+  color: var(--font-color);
+}
+
+.tasks .bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--bottom-nav-border-color);
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.tasks .bottom-nav .items {
+  color: var(--items-left-font-color);
+}
+
+@media (max-width: 767px) {
+  .tasks .bottom-nav .items {
+    font-size: 10px;
+  }
+}
+
+.tasks .bottom-nav .btns button {
+  background-color: transparent;
+  border: none;
+  color: var(--btns-font-color);
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+@media (max-width: 767px) {
+  .tasks .bottom-nav .btns button {
+    font-size: 10px;
+  }
+}
+
+.tasks .bottom-nav .btns button:hover {
+  color: var(--btns-font-color-hover);
+}
+
+.tasks .bottom-nav .clear {
+  color: var(--btns-font-color);
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .tasks .bottom-nav .clear {
+    font-size: 10px;
+  }
+}
+
+.tasks .bottom-nav .clear:hover {
+  color: var(--btns-font-color-hover);
+}
+
+/* End Tasks */
+
+
+/* Start Active Classes */
+
+.checked {
+  background-image: var(--check-background) !important;
+}
+
+.checked i {
+  color: white !important;
+}
+
+.checked + p {
+  text-decoration: line-through !important;
+  color: var(--cheched-font-color) !important;
+}
+
+.active-type {
+  color: var(--bright-blue) !important;
+}
+
+/* End Active Classes */

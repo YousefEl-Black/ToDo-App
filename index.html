@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>ToDo</title>
+    <link rel="shortcut icon" href="imgs/icon.ico">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.rules.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="project">
+      <div class="back">
+        <img class="desk-dark" src="imgs/bg-desktop-dark.jpg" alt="">
+        <img class="desk-light" src="imgs/bg-desktop-light.jpg" alt="">
+      </div>
+      <div class="back-mob">
+        <img class="mob-dark" src="imgs/bg-mobile-dark.jpg" alt="">
+        <img class="mob-light" src="imgs/bg-mobile-light.jpg" alt="">
+      </div>
+      <div class="container">
+        <header>
+          <h1 class="logo">TODO</h1>
+          <div class="theme">
+            <img src="imgs/icon-sun.svg" alt="" class="sun">
+            <img src="imgs/icon-moon.svg" alt="" class="moon">
+          </div>
+        </header>
+
+        <div class="type">
+          <div class="add"><i class="fas fa-check"></i></div>
+          <input type="text" placeholder="Create a new todo..." maxlength="25">
+        </div>
+
+        <div class="tasks">
+
+          <!-- Start Testing Task-->
+          
+          <!-- <div class="task">
+            <div class="circle"><i class="fas fa-check"></i></div>
+            <p>Complete Online JavaScript Course</p>
+            <div class="del"><i class="fas fa-times"></i></div>
+          </div> -->
+
+
+          <!-- End Testing Task-->
+          <div class="empty">No todo.</div>
+          <div class="bottom-nav">
+            <div class="items"> <span></span> items left</div>
+            <div class="btns">
+              <button class="active-type all-btn">All</button>
+              <button class="active-btn">Active</button>
+              <button class="completed-btn">Completed</button>
+            </div>
+            <div class="clear">Clear Completed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
