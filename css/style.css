@@ -25,12 +25,18 @@
 
 /* Start Global Rules */
 
+html {
+  min-height: 100vh;
+  position: relative;
+}
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
   font-weight: 400;
   background-color: var(--body-color);
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  padding-bottom: 50px;
 }
 
 textarea:focus,
