@@ -72,7 +72,14 @@ input:focus{
 .add i {
   font-size: 12px;
   padding: 10px ;
+}
+
+.circle i {
   color: transparent;
+}
+
+.add i {
+  color: var(--font-color);
 }
 
 .add:hover {
