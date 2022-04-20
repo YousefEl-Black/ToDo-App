@@ -1,6 +1,6 @@
-// if (window.localStorage.getItem("tasks") == null) {
-//   window.localStorage.setItem("tasks", JSON.stringify([]));
-// }
+if (window.localStorage.getItem("tasks") == null) {
+  window.localStorage.setItem("tasks", JSON.stringify([]));
+}
 
 
 $(document).ready(function () {
