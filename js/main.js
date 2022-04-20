@@ -1,3 +1,8 @@
+// if (window.localStorage.getItem("tasks") == null) {
+//   window.localStorage.setItem("tasks", JSON.stringify([]));
+// }
+
+
 $(document).ready(function () {
   $(".bottom-nav .btns button").click(function () {
     for (i = 0; i < document.querySelectorAll(".bottom-nav .btns button").length; i++) {
@@ -262,23 +267,3 @@ if (window.localStorage.getItem("theme") == "light") {
   document.querySelector(".back .desk-light").style.display = "none";
   document.querySelector(".back-mob .mob-light").style.display = "none";
 }
-
-// --body-color: hsl(235, 21%, 11%);
-// --body-color:hsl(236, 33%, 92%); /**/
-// --list-color:hsl(235, 24%, 19%);
-// --list-color: #fff; /**/
-// --input-font-color: hsl(234, 39%, 85%);
-// --input-font-color: #000; /**/
-// --font-color: hsl(234, 39%, 85%);
-// --font-color: hsl(235, 19%, 35%); /**/
-// --btns-font-color: hsl(234, 39%, 85%);
-// --btns-font-color: hsl(236, 9%, 61%); /**/
-// --btns-font-color-hover: hsl(236, 33%, 92%);
-// --bottom-nav-border-color: hsl(234, 11%, 52%);
-// --items-left-font-color: hsl(234, 11%, 52%);
-// --cheched-font-color: hsl(233, 14%, 35%);
-// --cheched-font-color: hsl(236, 9%, 61%); /**/
-// --add-border-color: hsl(237, 14%, 26%);
-// --add-border-color: hsl(236, 9%, 61%); /**/
-// --circle-border-color: hsl(237, 14%, 26%);
-// --circle-border-color: hsl(236, 9%, 61%); /**/
